@@ -389,7 +389,7 @@ class DartCodeViewer extends StatelessWidget {
     );
   }
 
-  InlineSpan codifyString(
+  TextSpan codifyString(
     String content,
     DartCodeViewerThemeData dartCodeViewerThemeData,
   ) {
@@ -453,7 +453,7 @@ class DartCodeViewer extends StatelessWidget {
 
 class _DartCodeViewerPage extends StatelessWidget {
   const _DartCodeViewerPage(this.code);
-  final InlineSpan code;
+  final TextSpan code;
 
   @override
   Widget build(BuildContext context) {
@@ -490,9 +490,9 @@ class _DartCodeViewerPage extends StatelessWidget {
           ),
         Expanded(
           child: SingleChildScrollView(
-            child: RichText(
+            child: SelectableText.rich(
+              _richTextCode,
               textDirection: TextDirection.ltr,
-              text: _richTextCode,
             ),
           ),
         ),
