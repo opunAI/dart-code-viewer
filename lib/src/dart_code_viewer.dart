@@ -477,7 +477,7 @@ class _DartCodeViewerPage extends StatelessWidget {
     }
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         if (DartCodeViewerTheme.of(context).showCopyButton!)
           ElevatedButton(
